@@ -59,3 +59,4 @@ total = 11
 console.log(findMatchNumbers(arr, total))
 // example 1 returns [[1, 10]]
 // example 2 returns [[1, 1, 10], [1, 3, 8], [3, 9]]
+// example 3 returns []
