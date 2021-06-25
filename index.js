@@ -9,6 +9,21 @@ function arrayEquals(a, b) {
 }
 
 function findMatchNumbers(arr, number) {
+  // type checking
+  if (!Array.isArray(arr) || !Number.isInteger(number)) {
+    if (!Array.isArray(arr)) console.log('First argument is not an array.')
+    if (!Number.isInteger(number))
+      console.log('Second argument is not an integer.')
+
+    return
+  }
+
+  // empty error checking
+  if (arr.length === 0) {
+    console.log('Array in first argument is empty.')
+    return []
+  }
+
   /* 
     array is sorted first to better find shallow duplicates.
     in case of example 2, reference for [1, 8, 3] != [8, 3 ,1],
@@ -45,8 +60,8 @@ let arr
 let total
 
 // example 1:
-arr = [5, 1, 10, 7]
-total = 11
+// arr = [5, 1, 10, 7]
+// total = 11
 
 // example 2:
 // arr = [1, 8, 9, 3, 10, 1]
